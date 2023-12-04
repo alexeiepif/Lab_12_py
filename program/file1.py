@@ -1,11 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+# Самостоятельно изучите работу со стандартным пакетом Python timeit.
+# Оцените с помощью этого модуля скорость работы итеративной 
+# и рекурсивной версий функций factorial и fib . Во сколько раз изменится 
+# скорость работы рекурсивных версий функций factorial и fib 
+# при использовании декоратора lru_cache? Приведите в отчет и
+# обоснуйте полученные результаты.
 
-import random as rnd
+
 import matplotlib.pyplot as plt
 from functools import lru_cache
-import numpy as np
 import timeit
 
 
