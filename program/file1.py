@@ -10,6 +10,9 @@ import timeit
 
 
 def factorial_rec(n):
+    """
+    Функция, вычисляющая факториал рекурсивно
+    """
     if n == 0:
         return 1
     else:
@@ -17,6 +20,9 @@ def factorial_rec(n):
 
 
 def fib_rec(n):
+    """
+    Функция, вычисляющая число фибонначи рекурсивно
+    """
     if n == 0 or n == 1:
         return n
     else:
@@ -24,6 +30,11 @@ def fib_rec(n):
 
 @lru_cache
 def factorial_rec_lru(n):
+    """
+    Функция, вычисляющая факториал рекурсивно
+
+    Оптимитизирована с использованием lru_cache
+    """
     if n == 0:
         return 1
     else:
@@ -31,6 +42,11 @@ def factorial_rec_lru(n):
 
 @lru_cache
 def fib_rec_lru(n):
+    """
+    Функция, вычисляющая число фибонначи рекурсивно
+
+    Оптимитизирована с использованием lru_cache
+    """
     if n == 0 or n == 1:
         return n
     else:
@@ -38,6 +54,9 @@ def fib_rec_lru(n):
 
 
 def factorial_iter(n):
+    """
+    Функция, вычисляющая факториал итеративно
+    """
     product = 1
     while n > 1:
         product *= n
@@ -46,6 +65,9 @@ def factorial_iter(n):
 
 
 def fib_iter(n):
+    """
+    Функция, вычисляющая число фибонначи итеративно
+    """
     a, b = 0, 1
     while n > 0:
         a, b = b, a + b
@@ -54,6 +76,9 @@ def fib_iter(n):
 
 
 def create_graph(b, c, namegraph):
+    """
+    Создание графика из точек и настройка окна
+    """
     plt.scatter(b, c, s=5)
     plt.title(namegraph)
     plt.xlabel("Число, переданное в функцию")
@@ -61,6 +86,9 @@ def create_graph(b, c, namegraph):
 
 
 def func_time(case_func, size):
+    """
+    Замер времени выполнения функций для разных случаев
+    """
     time = []
     repeat = 50
     N = [i for i in range(30)]
