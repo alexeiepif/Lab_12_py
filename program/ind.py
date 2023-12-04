@@ -17,6 +17,11 @@ def recursive_function(x, n):
 
 
 if __name__ == '__main__':
-    x, n = input("Введите 2 числа х и n через пробел")
+    x, n = tuple(
+        map(
+            int,
+            input("Введите 2 числа х и n через пробел ").split()
+        )
+    )
     x_n = recursive_function(x, n)
     print("{}^{} = {}".format(x, n, x_n))
