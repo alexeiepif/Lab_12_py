@@ -2,12 +2,11 @@
 # -*- coding: utf-8 -*-
 
 # Самостоятельно изучите работу со стандартным пакетом Python timeit.
-# Оцените с помощью этого модуля скорость работы итеративной 
-# и рекурсивной версий функций factorial и fib . Во сколько раз изменится 
-# скорость работы рекурсивных версий функций factorial и fib 
+# Оцените с помощью этого модуля скорость работы итеративной
+# и рекурсивной версий функций factorial и fib . Во сколько раз изменится
+# скорость работы рекурсивных версий функций factorial и fib
 # при использовании декоратора lru_cache? Приведите в отчет и
 # обоснуйте полученные результаты.
-
 
 import matplotlib.pyplot as plt
 from functools import lru_cache
@@ -33,6 +32,7 @@ def fib_rec(n):
     else:
         return fib_rec(n - 2) + fib_rec(n - 1)
 
+
 @lru_cache
 def factorial_rec_lru(n):
     """
@@ -44,6 +44,7 @@ def factorial_rec_lru(n):
         return 1
     else:
         return n * factorial_rec_lru(n - 1)
+
 
 @lru_cache
 def fib_rec_lru(n):
